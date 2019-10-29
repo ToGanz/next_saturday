@@ -9,7 +9,7 @@ gem 'jquery-rails', '4.3.1'
 gem 'turbolinks',   '5.0.1'
 gem 'jbuilder',     '2.7.0'
 
-gem 'bcrypt',         '3.1.12'
+gem 'bcrypt',         '3.1.12' # for has_secure_password
 gem 'bootstrap-sass', '3.3.7'
 
 
