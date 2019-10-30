@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: next_saturday_production
+  username: next_saturday
+  password: <%= ENV['NEXT_SATURDAY_DATABASE_PASSWORD'] %>
