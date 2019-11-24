@@ -17,3 +17,12 @@ User.create!(name:  name,
     activated: true,
     activated_at: Time.zone.now)
 end
+
+users = User.order(:created_at).take(6)
+50.times do
+  title = Faker::Lorem.words(1).join('')
+  date = Faker::Date.between(Date.today, 3.months.from_now)
+  content = Faker::Lorem.sentence(5)
+  users.each { |user| user.events.create!(title: title, date: date, 
+                                          content: content) }
+end

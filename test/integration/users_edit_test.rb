@@ -35,7 +35,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_equal email, @user.email
     #test to make sure that friendly forwarding only forwards to the given URL the first time
     log_in_as(@user)
-    assert_equal session[:forwarding_url], nil
+    assert_nil session[:forwarding_url]
     assert_redirected_to user_url(@user)
   end
 

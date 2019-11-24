@@ -76,5 +76,13 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?(:remember, '')
   end
+
+  test "associated events should be destroyed" do
+    @user.save
+    @user.events.create!(title: "Event", content: "Lorem ipsum", date: "2019-11-22 06:05:30")
+    assert_difference 'Event.count', -1 do
+      @user.destroy
+    end
+  end
   
 end

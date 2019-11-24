@@ -242,9 +242,9 @@ input {
   @include box_sizing;
 }
 
-/* microposts */
+/* events */
 
-.microposts {
+.events {
   list-style: none;
   padding: 0;
   li {
@@ -252,7 +252,8 @@ input {
     border-top: 1px solid #e8e8e8;
   }
   .user {
-    margin-top: 5em;
+    display: block;
+    margin-left: 60px;
     padding-top: 0;
   }
   .content {
@@ -263,15 +264,15 @@ input {
       padding: 5px 0;
     }
   }
-  .timestamp {
+  .date {
     color: $gray-light;
     display: block;
     margin-left: 60px;
   }
-  .gravatar {
-    float: left;
-    margin-right: 10px;
-    margin-top: 5px;
+  .title {
+    font-weight: 900;
+    display: block;
+    margin-left: 60px;
   }
 }
 
