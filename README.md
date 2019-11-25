@@ -15,6 +15,7 @@ TODO's:
 - The show page of the event should list all participants.
 - The show page of the user (user's profile page) should show the upcoming        events they participate in. At the moment it just shows their created events.
 - The Homepage should be a calendar with all the events of the month
+- the test suite of the interface of the Homepage is still lacking
 
 
 
