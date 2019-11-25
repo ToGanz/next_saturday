@@ -45,4 +45,4 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails server
 ```
 
-deployed version on heroku: https://next-saturday.herokuapp.com/
+Or test the deployed version on heroku: https://next-saturday.herokuapp.com/
