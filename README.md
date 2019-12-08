@@ -11,7 +11,7 @@ The app isn't finished yet.
 TODO's:
 
 - The Homepage should be a calendar with all the events of the month
-- the test suite of the interface of the Homepage is still lacking
+- the test suite for Interface and event attendance is not finished
 
 
 
