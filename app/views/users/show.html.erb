@@ -8,12 +8,11 @@
     </section>
   </aside>
   <div class="col-md-8">
-    <% if @user.events.any? %>
-      <h3>Your upcoming Events (<%= @user.events.count %>)</h3>
+    <% if @events.any? %>
+      <h3>Your upcoming Events (<%= @events.count %>)</h3>
       <ol class="events">
         <%= render @events %>
       </ol>
-      <%= will_paginate @events %>
     <% end %>
   </div>
 </div>

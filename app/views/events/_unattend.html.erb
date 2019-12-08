@@ -1,0 +1,4 @@
+<%= form_for(current_user.event_attendances.find_by(event_id: @event.id),
+             html: { method: :delete }) do |f| %>
+  <%= f.submit "Unattend", class: "btn" %>
+<% end %>

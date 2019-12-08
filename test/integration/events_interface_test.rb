@@ -31,7 +31,7 @@ class EventsInterfaceTest < ActionDispatch::IntegrationTest
     end
     assert_redirected_to root_url
     follow_redirect!
-    # die asserts funktionieren nicht, links sind aber 
+    # die asserts funktionieren nicht, links sind aber da
     #assert_match title, response.body
     #assert_select 'a', text: "delete event"
     # Delete post

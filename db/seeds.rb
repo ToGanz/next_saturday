@@ -1,3 +1,5 @@
+
+# Users
 User.create!(name:  "Example User",
   email: "example@example.com",
   password:              "password",
@@ -7,10 +9,10 @@ User.create!(name:  "Example User",
   activated_at: Time.zone.now)
 
 99.times do |n|
-name  = Faker::Name.name
-email = "example-#{n+1}@example.com"
-password = "password"
-User.create!(name:  name,
+  name  = Faker::Name.name
+  email = "example-#{n+1}@example.com"
+  password = "password"
+  User.create!(name:  name,
     email: email,
     password:              password,
     password_confirmation: password,
@@ -18,6 +20,7 @@ User.create!(name:  name,
     activated_at: Time.zone.now)
 end
 
+# Events
 users = User.order(:created_at).take(6)
 50.times do
   title = Faker::Lorem.words(1).join('')
@@ -26,3 +29,10 @@ users = User.order(:created_at).take(6)
   users.each { |user| user.events.create!(title: title, date: date, 
                                           content: content) }
 end
+
+# Event Attendances
+event1 = Event.first
+event2 = Event.second
+event_attendees = users
+event_attendees.each { |attendee| attendee.attend(event1) }
+event_attendees.each { |attendee| attendee.attend(event2) }

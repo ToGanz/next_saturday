@@ -12,9 +12,8 @@ class UsersProfileTest < ActionDispatch::IntegrationTest
     assert_template 'users/show'
     assert_select 'title', full_title(@user.name)
     assert_select 'h1', text: @user.name
-    assert_match @user.events.count.to_s, response.body
-    assert_select 'div.pagination'
-    @user.events.paginate(page: 1).each do |event|
+    assert_match @user.attended_events.count.to_s, response.body
+    @user.attended_events.each do |event|
       assert_match event.title, response.body
       #assert_match event.date, response.body #todo: warum so nicht testbar?
       assert_match event.content, response.body

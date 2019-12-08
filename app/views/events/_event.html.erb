@@ -1,5 +1,7 @@
 <li id="event-<%= event.id %>">
-  <span class="title"><%= event.title %></span>
+  <span class="title">
+    <%= link_to event.title, event %>
+  </span>
   <span class="user">
     <%= link_to event.user.name, event.user %>
     <% if current_user?(event.user) || ( logged_in? && current_user.admin? ) %> | 
@@ -9,4 +11,5 @@
   </span>
   <span class="date"><%= event.date.to_formatted_s(:long_ordinal) %></span>
   <span class="content"><%= event.content %></span>
+  <%#= render 'events/attend_form' if logged_in? %>
 </li>
