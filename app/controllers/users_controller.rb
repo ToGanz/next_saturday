@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @events = @user.attended_events
+    @events = @user.attended_events.where("date > ?", DateTime.yesterday )
     redirect_to root_url and return unless @user.activated?
   end
 
