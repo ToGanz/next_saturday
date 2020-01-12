@@ -5,13 +5,7 @@ This is an webapp for event planning. I plan to use with a group of friends to o
 Users can signup, activate their accounts and reset their passwords. Then users can create events.
 
 My aim in developing this app is to get the concept of authentication and authorization down and to improve my skills in writing Tests.
-I copied the frontend of the app from a rails tutorial and only modified it
-
-The app isn't finished yet. 
-TODO's:
-
-- The Homepage should be a calendar with all the events of the month
-- the test suite for Interface and event attendance is not finished
+I copied the frontend of the app from a rails tutorial and only modified it.
 
 
 
